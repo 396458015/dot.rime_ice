@@ -3,22 +3,52 @@ patch:
   # __include: rime_ice_suggestion:/
   # 以下根据自己所需自行定义，仅做参考。
   # 针对对应处方的定制条目，请使用 <recipe>.custom.yaml 中配置，例如 rime_ice.custom.yaml
-  __patch:
-    key_binder/bindings/+:
-      # 翻页 - =
-      - { when: has_menu, accept: minus, send: Page_Up }
-      - { when: has_menu, accept: equal, send: Page_Down }
+  # __patch:
+  #   key_binder/bindings/+:
+  #     # 翻页 , .
+  #     - { when: paging, accept: comma, send: Page_Up }
+  #     - { when: has_menu, accept: period, send: Page_Down }
 
-      # 翻页逗号句号
-      - { when: paging, accept: comma, send: Page_Up }
-      - { when: has_menu, accept: period, send: Page_Down }
+  schema_list:
+    - {schema: rime_ice}
 
-    # 候选词为7
-    menu/page_size: 7
+  # 候选词个数
+  menu/page_size: 7
 
-    schema_list:
-      - {schema: rime_ice}
+  # 方案选单切换 Control+`
+  "switcher/hotkeys":
+    - "Control+grave"
 
-    # Control+` 不设置F4
-    "switcher/hotkeys":
-      - "Control+grave"
+  # 呼出时不折叠
+  switcher/fold_options: false
+
+  # 结尾的 /+ 表示在原设置基础上追加
+  key_binder/bindings/+:
+    # 翻页 , .
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+
+    # 切换中英文标点
+    - { when: always, accept: Control+Shift+dollar, toggle: ascii_punct }
+
+    # ":" (分号)选择第 2 个候选词
+    - { when: has_menu, accept: semicolon, send: 2 }
+
+    # emacs_editing:
+    - { when: composing, accept: Control+h, send: Up }
+    - { when: composing, accept: Control+l, send: Down }
+
+    # - { when: composing, accept: Control+p, send: Up }
+    # - { when: composing, accept: Control+n, send: Down }
+    # - { when: composing, accept: Control+b, send: Left }
+    # - { when: composing, accept: Control+f, send: Right }
+    # - { when: composing, accept: Control+a, send: Home }
+    # - { when: composing, accept: Control+e, send: End }
+    # - { when: composing, accept: Control+d, send: Delete }
+    # - { when: composing, accept: Control+k, send: Shift+Delete }
+    # - { when: composing, accept: Control+h, send: BackSpace }
+    # - { when: composing, accept: Control+g, send: Escape }
+    # - { when: composing, accept: Control+bracketleft, send: Escape }
+    # - { when: composing, accept: Control+y, send: Page_Up }
+    # - { when: composing, accept: Alt+v, send: Page_Up }
+    # - { when: composing, accept: Control+v, send: Page_Down }
