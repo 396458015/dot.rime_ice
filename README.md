@@ -5,6 +5,7 @@
         default.custom.yaml  常规配置
         installation.yaml    同步配置
         rime_ice.dict.yaml   词库挂载配置
+        weasel.custom.yaml   应用默认中英文设置,vim_mode,中文输入西文标点等配置
 
 ## 2. 挂载sogou词库
     2.1 在'Rime'中创建'my_dict'文件夹，将'sogou.dict.yaml'放在这个文件夹中
@@ -45,7 +46,7 @@
     2. 安装雾凇拼音  
        将rime-ice文件放置在rime配置文件路径中'C:\Users\ThinkPad\AppData\Roaming\Rime'  
     3. 迁移配置文件  
-       3.1 将'default.custom.yaml','installation.yaml'放置在配置文件路径，替换原有文件  
+       3.1 将'default.custom.yaml','installation.yaml','weasel.custom.yaml'放置在配置文件路径，替换原有文件  
        3.2 修改配置文件中的'rime_ice.dict.yaml'  
            在import_tables中添加'- my-dicts/sogou'  
     4. 同步自造词库  
