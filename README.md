@@ -40,7 +40,7 @@
     在import_tables中添加'- my-dicts/sogou',完成sogou词库的挂载.
     注意:其余配置均为patch方式的补丁,rime-ice文件覆盖后不影响配置  
 
-# 重新安装小狼毫和自造词库迁移
+# 重新安装小狼毫、雾凇拼音和自造词库继承
     1. 安装weasel小狼毫nightly版  
     2. 安装雾凇拼音  
        将rime-ice文件放置在rime配置文件路径中'C:\Users\ThinkPad\AppData\Roaming\Rime'  
