@@ -1,5 +1,5 @@
 # 雾凇拼音设置
-## 增加sogou词库
+## 挂载sogou词库
     1.1 在'Rime'中创建'my_dict'文件夹，将'sogou.dict.yaml'放在这个文件夹中
     1.2 在'rime_ice.dict.yaml'中添加设置，导入sogou词库  
         在import_tables中添加'- my-dicts/sogou'  
@@ -22,3 +22,4 @@
 
 ## 升级雾凇词库
     可以全覆盖雾凇词库,仅修改'sogou.dict.yaml'中挂在词库的部分，即在import_tables中添加'- my-dicts/sogou'  
+    其余设置均为patch方式的补丁,文件覆盖后不影响配置
