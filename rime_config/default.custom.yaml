@@ -18,7 +18,8 @@ patch:
   # 方案选单切换 Control+`
   "switcher/hotkeys":
     # - "Control+grave"
-    - "Control+Shift+space"
+    # - "Control+Shift+space"
+    - "Control+Shift+BackSpace"
     # - "Control+Tab"
 
   # 呼出时不折叠
