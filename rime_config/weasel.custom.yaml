@@ -1,0 +1,6 @@
+# patch:
+#   app_options:
+#     alacritty.exe:
+#       ascii_mode: true  # 英文模式
+#       vim_mode: true  # ESC后转换为西文
+#       ascii_punct: true  # 中文输入英文标点
