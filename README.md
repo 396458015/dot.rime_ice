@@ -14,7 +14,7 @@
         注意，需把扩展词库放在雾凇词库下面,确保有重复词条时,最上面的词库中的权重生效  
     2.3 重新部署  
 
-## 3. 同步立自造词库
+## 3. 同步自造词库
     自己使用习惯生成的词库在配置路径中的'rime_ice.userdb'文件夹中,为二进制文件,迁移和管理,需要将二进制文件转换为txt文件  
     3.1 修改'installation.yaml'配置文件  
         设置'installation_id'  
@@ -36,7 +36,23 @@
     注意: 同步过程对于二进制文件和'rime_ice.userdb.txt'文件是双向的,如果二进制文件有词条AB,txt有词条CD,那么同步后就有词条ABCD.  
           如果二进制文件含有错误词条,而在txt删除错误词条,同步后txt还是有错误词条.  
 
-## 5. 升级雾凇词库
+## 5. 管理配置文件
+    5.1 建立了'copy_rime_config_files.bat',执行后自动将rime配置文件复制到github同步文件  
+
+    配置文件如下:  
+    'default.custom.yaml'  
+    'installation.yaml'  
+    'rime_ice.dict.yaml'  
+    'weasel.custom.yaml'  
+
+    5.2 将bat文件放入开始菜单磁铁  
+      - 创建bat文件快捷方式  
+      - 将快捷方式放入'C:\Users\ThinkPad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs'  
+      - 该快捷方式在开始菜单列表中,右键选择'固定到'开始'屏幕'  
+ 
+    注意:如果有已有文件,该脚本会覆盖已有的重命名文件  
+
+## 6. 升级雾凇词库
     rime-ice文件全覆盖,仅修改'rime_ice.dict.yaml'中挂载词库的部分.
     在import_tables中添加'- my-dicts/sogou',完成sogou词库的挂载.
     注意:其余配置均为patch方式的补丁,rime-ice文件覆盖后不影响配置  
