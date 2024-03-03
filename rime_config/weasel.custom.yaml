@@ -23,3 +23,46 @@ patch:
 
     listary.exe:
       ascii_mode: true  # 英文模式
+
+
+  # font size
+  style/font_point: 15  # 全局字体字号, default: 14
+  style/label_font_point: 15  # 标签字体字号，不设定 fallback 到 font_point, default: 14
+  style/comment_font_point: 14  # 注释字体字号，不设定 fallback 到 font_point, default: 13
+
+
+  # preset_color_schemes:
+  #   purity_of_form_custom:
+  #     name: "純粹的形式／Purity of Form Custom"
+  #     author: 雨過之後、佛振
+
+  #     # 原版不透明配色
+  #     text_color: 0x808080
+  #     back_color: 0x545554
+  #     label_color: 0xBBBBBB
+  #     border_color: 0x545554
+  #     shadow_color: 0xb4000000
+  #     comment_text_color: 0x808080
+  #     candidate_text_color: 0xEEEEEE
+  #     hilited_text_color: 0xEEEEEE
+  #     hilited_comment_text_color: 0x808080
+  #     hilited_candidate_back_color: 0xE3E3E3
+  #     hilited_candidate_border_color: 0xE3E3E3
+  #     hilited_candidate_label_color: 0x4C4C4C
+  #     hilited_candidate_text_color: 0x000000
+
+  #     # 透明度为5%的配色(前面两个字母对应的是透明度AA)
+  #     # 透明度aa:   0%:FF   5%:F2   10%:E5   20%:CC   100%:00
+  #     text_color: 0xFF808080
+  #     back_color: 0xF2545554
+  #     label_color: 0xFFBBBBBB
+  #     border_color: 0xF2545554
+  #     shadow_color: 0xb4000000
+  #     comment_text_color: 0xFF808080
+  #     candidate_text_color: 0xFFEEEEEE
+  #     hilited_text_color: 0xFFEEEEEE
+  #     hilited_comment_text_color: 0xFF808080
+  #     hilited_candidate_back_color: 0xF2E3E3E3
+  #     hilited_candidate_border_color: 0xF2E3E3E3
+  #     hilited_candidate_label_color: 0xF24C4C4C
+  #     hilited_candidate_text_color: 0xFF000000
